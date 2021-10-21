@@ -1,0 +1,124 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int i,j,n,m;
+    cin>>n>>m;
+    char ara[n+1][m+1];
+    for(i=0; i<n; i++)
+    {
+        for(j=0; j<m; j++)
+        {
+            cin>>ara[i][j];
+        }
+    }
+    int a,b;
+    cin>>a>>b;
+    if(a==1 && b==1)
+    {
+        if(ara[0][0]=='x')
+        {
+            if(ara[0][1]=='x')
+            {
+                if(ara[1][0]=='x')
+                {
+                    if(ara[1][1]=='x')
+                    {
+                        cout<<"yes"<<endl;
+                    }
+                    else
+                    {
+                        cout<<"no"<<endl;
+                    }
+                }
+                else
+                {
+                    cout<<"no"<<endl;
+                }
+            }
+            else
+            {
+                cout<<"no"<<endl;
+            }
+        }
+        else
+        {
+            cout<<"no"<<endl;
+        }
+    }
+    else
+    {
+        if(ara[a-1][b-1]=='x')
+        {
+            if(ara[a-1][b-2]=='x')
+            {
+                if(ara[a-1][b]=='x')
+                {
+                    if(ara[a-1][b-1]=='x')
+                    {
+                        if(ara[a-2][b-2]=='x')
+                        {
+                            if(ara[a-2][b-1]=='x')
+                            {
+                                if(ara[a-2][b]=='x')
+                                {
+                                    if(ara[a][b-2]=='x')
+                                    {
+                                        if(ara[a][b-1]=='x')
+                                        {
+                                            if(ara[a][b]=='x')
+                                            {
+                                                cout<<"yes"<<endl;
+                                            }
+                                            else
+                                            {
+                                                cout<<"no"<<endl;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            cout<<"no"<<endl;
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        cout<<"no"<<endl;
+                                    }
+                                }
+                                else
+                                {
+                                    cout<<"no"<<endl;
+                                }
+                            }
+                            else
+                            {
+                                cout<<"no"<<endl;
+                            }
+                        }
+                        else
+                        {
+                            cout<<"no"<<endl;
+                        }
+                    }
+                    else
+                    {
+                        cout<<"no"<<endl;
+                    }
+                }
+                else
+                {
+                    cout<<"no"<<endl;
+                }
+            }
+            else
+            {
+                cout<<"no"<<endl;
+            }
+        }
+        else
+        {
+            cout<<"no"<<endl;
+        }
+    }
+}
